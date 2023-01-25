@@ -1,0 +1,8 @@
+// Inheritance rules, and role of constructors
+In general, if class B has its own constructor defined, then it must explicitly call the parent constructor with the required arguments to initialize class A. If class B does not have its own constructor defined, then the arguments passed when creating an instance of class B will be passed to the parent constructor of class A automatically.
+
+It's also important to note that if class B's constructor does not call the parent constructor with the required arguments, then class A's properties will not be initialized properly and it can cause unexpected behavior or errors in your code.
+
+For example, if class A has a constructor that expects an argument, and class B does not pass that argument to the parent constructor, then class A's properties will not be initialized properly and it can cause unexpected behavior or errors in your code.
+
+In general, when you extend a class, it's a good practice to call the parent constructor, so that the parent class gets initialized properly and any required setup is done. 
